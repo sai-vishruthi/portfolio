@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0077b6, #009acd); /* Blue Gradient */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a8e6ff; /* Light Blue Hover */
+}
+
+/* Sections */
+section {
+    padding: 50px;
+}
+
+section h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #005f99; /* Dark Blue */
+    margin-bottom: 20px;
+    border-left: 5px solid #0077b6;
+    padding-left: 10px;
+}
+
+/* About Me */
+#about {
+    background: #d0e1ff; /* Soft Blue */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#skills ul li {
+    display: inline-block;
+    background: linear-gradient(135deg, #005f99, #0088cc); /* Deep Blue */
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#skills ul li:hover {
+    transform: scale(1.1);
+}
+
+/* Projects Section */
+.project {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #a8d8ff; /* Light Blue */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    padding: 12px;
+    margin: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+input {
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: linear-gradient(135deg, #0077b6, #009acd);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #005f99, #0077b6);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #005f99, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
