@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gurram Sai Vishruthi</h1>
+        <h1 id="typing-text"></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a first-year Computer Science Engineering student skilled in HTML, CSS, JavaScript, Python, and Data Structures.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Data Structures</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Weather App</h3>
+            <p>A real-time weather application using JavaScript and OpenWeather API to display current weather conditions.</p>
+        </div>
+        <div class="project">
+            <h3>Task Manager</h3>
+            <p>A simple to-do list web app built with JavaScript to manage daily tasks efficiently.</p>
+        </div>
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>This portfolio itself, built using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+        </div>
+        <div class="project">
+            <h3>Movie Recommendation System</h3>
+            <p>A Python-based project using machine learning to suggest movies based on user preferences.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>Connect with me:  
+            <a href="https://github.com/sai-vishruthi" target="_blank">
+                <i class="fa-brands fa-github" style="color: white;"></i>
+            </a>
+            <a href="https://linkedin.com/in/sai-vishruthi-gurram/" target="_blank">
+                <i class="fa-brands fa-linkedin-in" style="color: white;"></i>
+            </a>
+        </p>
+    </footer>
+    <script>
+        const textArray = ["I am a Developer", "I am a Student"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 150;
+        const deletingSpeed = 100;
+        const pauseBetween = 1500;
+        const typingElement = document.getElementById("typing-text");
+    
+        function typeEffect() {
+            let currentText = textArray[textIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex--);
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex++);
+            }
+    
+            if (!isDeleting && charIndex === currentText.length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, pauseBetween);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % textArray.length;
+                setTimeout(typeEffect, typingSpeed);
+            } else {
+                setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+    
+</body>
+</html>
